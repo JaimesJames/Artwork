@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{message}} hii
+        <div v-bind:title="test_1">Hello</div>
+        <img :src="test_2_img">
+        <div onclick="vue.test_2_img=`http://via.placeholder.com/100x100`">จตุรัส</div>
+        <div onclick="vue.test_2_img=`http://via.placeholder.com/200x100`">แนวนอน</div>
+        <div onclick="vue.test_2_img=`http://via.placeholder.com/100x200`">แนวตั้ง</div>
+    </div>
+</body>
+<script>
+    var vue = new Vue({
+        el: '#app', 
+        data:{
+            message: 'hi',
+            test_1: 'mint',
+            test_2_img: 'http://via.placeholder.com/100x100'
+        }
+    })
+</script>
+</html>

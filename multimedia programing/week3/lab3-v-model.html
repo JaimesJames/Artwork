@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{message}} e-dok
+        <div :title="test_1">Hello</div>
+        <input type="text" name="" placeholder="site title" v-model="test_1"><br>
+        <img :src="`http://via.placeholder.com/${img_width}x${img_height}`">
+        <input type="number" min="100" max="1000" v-model="img_width" placeholder="width">
+        <input type="number" min="100" max="1000" v-model="img_height" placeholder="height">
+        <div onclick="vue.img_width = 100; vue.img_height = 100">จตุรัส</div>
+        <div onclick="vue.img_width = 200; vue.img_height = 100">แนวนอน</div>
+        <div onclick="vue.img_width = 100; vue.img_height = 200">แนวตั้ง</div>
+    </div>
+</body>
+<script>
+    var vue = new Vue({
+        el: '#app', 
+        data:{
+            message: 'hi',
+            test_1: 'mint',
+            test_2_img: 'http://via.placeholder.com/100x100',
+            img_width: '100',
+            img_height: '100'
+        }
+    })
+</script>
+</html>
