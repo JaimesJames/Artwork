@@ -29,8 +29,6 @@ export default {
 
 <style>
 #app {
-  font-family: 'Inter', sans-serif;
-  font-family: 'Kanit', sans-serif;
   font-family: 'Noto Sans Thai', sans-serif;
   color: #2c3e50;
   text-align: center;
@@ -58,6 +56,8 @@ h1 {
     flex: 1;
     padding-top: 6px;
     border-radius: 20px;
+    transition: .2s;
+    
     
 
  }
@@ -67,6 +67,7 @@ h1 {
     flex: 1;
     background-color: rgb(46, 253, 39);
     font-weight: 600;
+    cursor: pointer;
 
  }
 </style>
