@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="card"></div>
+        <div class=" bg-blue-300"></div>
         <div class="card"></div>
         <div class="card"></div>
         <div class="card"></div>
