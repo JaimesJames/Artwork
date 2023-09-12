@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            padding: 1rem;
+            border: 1px solid navy;
+            margin-bottom: 1rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>ข้อมูลของ <span id="user_fullname">ผู้ใช้</span></h1>
+        <h2 id="user_fname">ชื่อจริง</h2>
+        <h3 id="user_lname">นามสกุล</h3>
+    </div>
+
+    <div id="all_user">
+        <div onclick="selectUser(this)" class="card" data-item="0" data-fullname="มีสิทธิ์ มั้ยคะ" data-fname="มีสิทธิ์"
+            data-lname="มั้ยคะ">
+            <h2>มีสิทธิ์</h2>
+            <h3>มั้ยคะ</h3>
+        </div>
+        <div onclick="selectUser(this)" class="card" data-item="1" data-fullname="เมธิส จอมพจ" data-fname="เมธิส"
+            data-lname="จอมพจ">
+            <h2>เมธิส</h2>
+            <h3>จอมพจ</h3>
+        </div>
+
+    </div>
+</body>
+<script>
+    function selectUser(el){
+        let data = el.dataset
+        console.log(data)
+        document.querySelector('#user_fullname').innerText = data.fullname
+        document.querySelector('#user_fname').innerText = data.fname
+        document.querySelector('#user_lname').innerText = data.lname
+    }
+</script>
+</html>

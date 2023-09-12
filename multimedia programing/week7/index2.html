@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            font-size:  10px;
+            padding: 1rem;
+            border: 1px solid navy;
+            margin-bottom: 1rem;
+
+        }
+
+        .card[data-select="1"]{
+            font-size: 1rem;
+            border-width: 4px;
+        }
+
+        .card[data-gate="and"]{
+            color: powderblue;
+        }
+        .card[data-gate="or"]{
+            color: palegreen;
+        }
+        .card[data-gate="nor"]{
+            color: palevioletred;
+        }
+        .card[data-gate="not"]{
+            color: plum;
+        }
+
+        .is-selecting{
+            display: none;
+        }
+
+        .card[data-select="1"] .is-selecting{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>ข้อมูลของ <span id="user_fullname">ผู้ใช้</span></h1>
+        <h2 id="user_fname">ชื่อจริง</h2>
+        <h3 id="user_lname">นามสกุล</h3>
+        <h3 id="user_province">จังหวัด</h3>
+        <h3 id="user_age">อายุ</h3>
+    </div>
+
+    <div id="all_user">
+
+    </div>
+    <button onclick="renderUserCard()">
+        ดูสมาชิก
+    </button>
+</body>
+<script>let users = [
+            {
+                fname: 'มีสิทธิ์',
+                lname: 'มั้ยคะ',
+                province: 'ชลบุรี',
+                age: '23',
+                gate: 'and'
+            },
+            {
+                fname: 'เมธิส',
+                lname: 'จอมพจ',
+                province: 'สงขลา',
+                age: '20',
+                gate: 'or'
+            },
+            {
+                fname: 'เจซี่',
+                lname: 'เอ',
+                province: 'กรุงเทพมหานคร',
+                age: '40',
+                gate: 'nor'
+            },
+            {
+                fname: 'เคนน่า',
+                lname: 'ปาปาย่า',
+                province: 'อรัญญะ',
+                age: '99',
+                gate: 'not'
+            },
+        ]
+
+    function renderUserCard(){
+        let html = ``
+        let c = 0
+        for(let i of users){
+            html += 
+            `
+
+            <div onclick="selectUser(this)" class="card" data-select="0" data-item="${c}" data-gate="${i.gate}">
+            <div class="is-selecting">กำลังดู</div>
+            <h2>${i.fname}</h2>
+            <h3>${i.lname}</h3>
+            </div>
+            `
+            c++
+        }
+        document.querySelector('#all_user').innerHTML = html
+        console.log(html)
+    }
+
+
+    function selectUser(el){
+        let data = el.dataset
+        let card = document.querySelectorAll('.card[data-select="1"]')
+        for(let i of card){
+            i.dataset.select = 0
+        }
+        el.dataset.select = 1
+        document.querySelector('#user_fullname').innerText = users[data.item].fname+
+        ' ' +users[data.item].lname
+        // document.querySelector('#user_fname').innerText = data.fname
+        // document.querySelector('#user_lname').innerText = data.lname
+
+        document.querySelector('#user_fname').innerText = users[data.item].fname
+        document.querySelector('#user_lname').innerText = users[data.item].lname
+        document.querySelector('#user_province').innerText = users[data.item].province
+        document.querySelector('#user_age').innerText = users[data.item].age
+    }
+</script>
+</html>
