@@ -69,15 +69,6 @@
             font-size: 1.2rem;
         }
 
-        .content-1 button:hover {
-            background-color: black;
-            color: white;
-        }
-
-        .btnking[data-select="1"] {
-            background-color: black;
-            color: white;
-        }
 
         .content-2-detail {
             padding: 5rem 1rem;
@@ -106,6 +97,7 @@
             justify-content: center;
             gap: 1rem;
             padding: 1rem;
+            margin-top: 1rem;
         }
 
         .content-3-detail {
@@ -149,6 +141,41 @@
         .specie[data-king="4"] {
             background: rgb(255, 179, 38);
         }
+
+        .specie[data-king="0"]:hover {
+            background: rgb(137, 62, 208);
+        }
+
+        .specie[data-king="1"]:hover {
+            background: rgb(191, 48, 48);
+        }
+
+        .specie[data-king="2"]:hover {
+            background: rgb(54, 45, 182);
+        }
+
+        .specie[data-king="3"]:hover {
+            background: rgb(86, 185, 44);
+        }
+
+        .specie[data-king="4"]:hover {
+            background: rgb(208, 145, 27);
+        }
+        .btnking[data-select="1"] {
+            color: white;
+        }
+
+        .btnking[data-select="0"]:hover {
+            color: rgb(155, 155, 155);
+            border-color: rgb(219, 219, 219);
+        }
+
+        footer{
+            background: black;
+            padding: 2rem;
+            text-align: center;
+            color: white;
+        }
     </style>
 </head>
 
@@ -177,7 +204,7 @@
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>UwU</footer>
 </body>
 <script>
     let kingdoms = [
@@ -327,7 +354,7 @@
         ".content-3-title"
     ).innerText = `What's species in ${kingdoms[0].name}`;
     document.querySelector(".content-3-select").innerHTML = content_3;
-
+    document.querySelector(".btnking[data-select='1']").style.background = kingdoms[document.querySelector(".btnking[data-select='1']").dataset.item].theme
     function selectKingdom(d) {
         for (let i of document.querySelectorAll('.btnking[data-select="1"]')) {
             i.dataset.select = 0;
@@ -384,7 +411,7 @@
             <p style="text-indent: 3rem">${kingdoms[king].species_detail[type]
                 }</p>
         </div>`
-        console.log('which')
+            console.log('which')
         }
         else {
             let king = document.querySelector('.btnking[data-select="1"]').dataset.item
