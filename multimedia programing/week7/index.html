@@ -1,276 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-      }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
 
-      .container {
-        width: 100%;
-        max-width: 1200px;
-        padding: 0;
-        margin: auto;
-      }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0;
+            margin: auto;
+        }
 
-      .container-space {
-        padding: 0 1rem;
-      }
+        .container-space {
+            padding: 0 1rem;
+        }
 
-      body {
-        background: rgb(241, 241, 241);
-      }
+        body {
+            background: rgb(241, 241, 241);
+        }
 
-      header {
-        background: rgb(21, 21, 21);
-        padding: 1rem;
-      }
+        header {
+            background: rgb(21, 21, 21);
+            padding: 1rem;
+        }
 
-      header h2 {
-        color: white;
-      }
+        header h2 {
+            color: white;
+        }
 
-      main {
-        padding: 8rem 1rem;
-        text-align: center;
-      }
+        main {
+            padding: 8rem 1rem;
+            text-align: center;
+        }
 
-      .title {
-        margin: 5rem 0;
-      }
+        .title {
+            margin: 5rem 0;
+        }
 
-      .title h1 {
-        font-size: 3rem;
-      }
+        .title h1 {
+            font-size: 3rem;
+        }
 
-      .content-1 {
-        display: flex;
-        padding: 1rem;
-        gap: 0.5rem;
-        row-gap: 1rem;
-        justify-content: center;
-        width: 60%;
-        margin: auto;
-        flex-wrap: wrap;
-      }
+        .content-1 {
+            display: flex;
+            padding: 1rem;
+            gap: 0.5rem;
+            row-gap: 1rem;
+            justify-content: center;
+            width: 60%;
+            margin: auto;
+            flex-wrap: wrap;
+        }
 
-      .content-1 button {
-        background-color: transparent;
-        border: 1.8px solid black;
-        border-radius: 50px;
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
-      }
+        .content-1 button {
+            background-color: transparent;
+            border: 1.8px solid black;
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+        }
 
-      .content-1 button:hover {
-        background-color: black;
-        color: white;
-      }
+        .content-1 button:hover {
+            background-color: black;
+            color: white;
+        }
 
-      .btnking[data-select="1"] {
-        background-color: black;
-        color: white;
-      }
+        .btnking[data-select="1"] {
+            background-color: black;
+            color: white;
+        }
 
-      .content-2-detail {
-        padding: 5rem 1rem;
-      }
+        .content-2-detail {
+            padding: 5rem 1rem;
+        }
 
-      .content-3-example {
-        padding: 5rem 1rem;
-      }
+        .content-3-example {
+            padding: 5rem 1rem;
+        }
 
-      .content-3-inner {
-        margin-top: 3rem;
-        display: grid;
-        grid-template-columns: 800px auto;
-        gap: 2rem;
-      }
+        .content-3-inner {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: 800px auto;
+            gap: 2rem;
+        }
 
-      .content-3-inner-main {
-        width: 100%;
-        height: auto;
-        padding: 1rem;
-      }
+        .content-3-inner-main {
+            width: 100%;
+            height: auto;
+            padding: 1rem;
+        }
 
-      .content-3-select {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        padding: 1rem;
-      }
+        .content-3-select {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+        }
 
-      .content-3-detail {
-        margin-top: 3rem;
-        padding: 1rem;
-        text-align: start;
-      }
+        .content-3-detail {
+            margin-top: 3rem;
+            padding: 1rem;
+            text-align: start;
+        }
 
-      .specie {
-        background-color: rgb(0, 0, 0);
-        color: white;
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        border-radius: 50px;
-        border: black;
-      }
-      .card-detail {
-        padding: 2rem 3rem;
-        margin: 1rem;
-        background: white;
-        border-radius: 20px;
-      }
+        .specie {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            border: black;
+        }
+
+        .card-detail {
+            padding: 2rem 3rem;
+            margin: 1rem;
+            background: white;
+            border-radius: 20px;
+        }
+
+        .specie[data-king="0"] {
+            background: rgb(158, 77, 234);
+        }
+
+        .specie[data-king="1"] {
+            background: rgb(232, 63, 63);
+        }
+
+        .specie[data-king="2"] {
+            background: rgb(74, 63, 232);
+        }
+
+        .specie[data-king="3"] {
+            background: rgb(101, 207, 55);
+        }
+
+        .specie[data-king="4"] {
+            background: rgb(255, 179, 38);
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <div class="container">
-        <div class="container-space">
-          <h2>Kingdom</h2>
+        <div class="container">
+            <div class="container-space">
+                <h2>Kingdom</h2>
+            </div>
         </div>
-      </div>
     </header>
     <main>
-      <div class="container">
-        <div class="container-space">
-          <div class="title">
-            <h1>Let's see Another Kingdom!!</h1>
-          </div>
-          <div class="content-1"></div>
-          <div class="content-2 content-2-detail"></div>
+        <div class="container">
+            <div class="container-space">
+                <div class="title">
+                    <h1>Let's see Another Kingdom!!</h1>
+                </div>
+                <div class="content-1"></div>
+                <div class="content-2 content-2-detail"></div>
 
-          <div class="content-3-example">
-            <h2 class="content-3-title"></h2>
-            <div class="content-3-select"></div>
-            <div class="content-3-detail"></div>
-          </div>
+                <div class="content-3-example">
+                    <h2 class="content-3-title"></h2>
+                    <div class="content-3-select"></div>
+                    <div class="content-3-detail"></div>
+                </div>
+            </div>
         </div>
-      </div>
     </main>
     <footer></footer>
-  </body>
-  <script>
+</body>
+<script>
     let kingdoms = [
-      {
-        status: 1,
-        name: "Monera",
-        detail:
-          "This is the kingdom of microscopic living things and groups together the prokaryotes (archaea and bacteria). This group is present in all habitats and is made up of single-cell things with no defined nucleus. Most bacteria are aerobic and heterotrophic, while the archaea are usually anaerobic and their metabolism is chemosynthetic.",
-        species: ["Archaebacteria", "Eubacteria"],
-        species_detail: [
-          "group of microorganisms considered to be an ancient form of life that evolved separately from the bacteria and blue-green algae, and they are sometimes classified as a kingdom. From: Investigating Seafloors and Oceans, 2017.",
-          "prokaryotic organisms (i.e. lacking a membrane-bound nucleus), predominantly unicellular, and with DNA in a single circular chromosome. Cell wall, when present, is made up of peptidoglycan. Examples are E. coli, Staphylococcus, Salmonella, Lactobacillus. Synonym:(true) bacteria.",
-        ],
-      },
-      {
-        status: 0,
-        name: "Fungi",
-        detail:
-          "This name is used to designate the fungi kingdom which includes yeasts, moulds and all species of mushrooms and toadstools. These multicellular aerobic heterotrophic eukaryotes have chitin in their cell walls, feed off other living things, and reproduce through spores.",
-        species: ["Ascomycetes", "Basidiomycetes"],
-        species_detail: [
-          "Fungal endophytes are defined as a group of fungi, mainly belonging to Ascomycota, that live in the inner healthy plant tissues (leaf, stem, root and reproductive structures), causing no apparent disease symptoms.",
-          "Fascinating group of fungi given their exceptional adjustment abilities to accommodate themselves to detrimental conditions of the environment where they constantly act as natural lignocellulose destroyers",
-        ],
-      },
-      {
-        status: 0,
-        name: "Protista",
-        detail:
-          "This group is the most primitive of the eukaryotics and all the others are descendants of it. The Protista kingdom is paraphyletic - it contains the common ancestor but not all its descendants - and it includes those eukaryotic organisms that are not deemed to be animals, plants or fungi such as protozoa. As it is so heterogeneous it is difficult to categorise it, since its members have very little in common.",
-        species: [
-          "Green algae",
-          "Brown algae",
-          "Red algae",
-          "Ciliated",
-          "Flagellated",
-          "Amoeboid protozoa",
-        ],
-        species_detail: [
-          "Group consisting of the Prasinodermophyta and its unnamed sister which contains the Chlorophyta and Charophyta/Streptophyta. The land plants (Embryophytes) have emerged deep in the Charophyte alga as sister of the Zygnematophyceae. Since the realization that the Embryophytes emerged within the green algae, some authors are starting to include them",
-          "The major seaweeds of the temperate and polar regions. They are dominant on rocky shores throughout cooler areas of the world. Most brown algae live in marine environments, where they play an important role both as food and as a potential habitat. For instance, Macrocystis, a kelp of the order Laminariales, may reach 60 m (200 ft) in length and forms prominent underwater kelp forests. Kelp forests like these contain a high level of biodiversity.",
-          "abundant in marine habitats but relatively rare in freshwaters. Approximately 5% of red algae species occur in freshwater environments, with greater concentrations found in warmer areas. Except for two coastal cave dwelling species in the asexual class Cyanidiophyceae, there are no terrestrial species, which may be due to an evolutionary bottleneck in which the last common ancestor lost about 25% of its core genes and much of its evolutionary plasticity.",
-          "group of alveolates characterized by the presence of hair-like organelles called cilia, which are identical in structure to eukaryotic flagella, but are in general shorter and present in much larger numbers, with a different undulating pattern than flagella.",
-          "A flagellate is a cell or organism with one or more whip-like appendages called flagella. The word flagellate also describes a particular construction (or level of organization) characteristic of many prokaryotes and eukaryotes and their means of motion.",
-          "often called an amoeboid, is a type of cell or unicellular organism with the ability to alter its shape, primarily by extending and retracting pseudopods. Amoebae do not form a single taxonomic group; instead, they are found in every major lineage of eukaryotic organisms. Amoeboid cells occur not only among the protozoa, but also in fungi, algae, and animals.",
-        ],
-      },
-      {
-        status: 0,
-        name: "Plantae",
-        detail:
-          "Trees, plants and other species of vegetation make up part of the Plantae kingdom - one of the oldest, and characterised by its immobile, multicellular and eukaryotic nature. These autotrophic things, whose cells contain cellulose and chlorophyll are essential for life on Earth since they release oxygen through photosynthesis. As regards their method of reproduction, this may be either sexual or asexual.",
-        species: [
-          "Equiseta",
-          "Lycopodia",
-          "Gymnosperms",
-          "Angiosperms",
-          "Ferns",
-          "Mosses",
-        ],
-        species_detail: [
-          "'living fossil', the only living genus of the entire subclass Equisetidae, which for over 100 million years was much more diverse and dominated the understorey of late Paleozoic forests. Some equisetids were large trees reaching to 30 m (98 ft) tall.",
-          "genus of clubmosses, also known as ground pines or creeping cedars,[3] in the family Lycopodiaceae. Two very different circumscriptions of the genus are in use.",
-          "gymnosperm, any vascular plant that reproduces by means of an exposed seed, or ovule—unlike angiosperms, or flowering plants, whose seeds are enclosed by mature ovaries, or fruits. The seeds of many gymnosperms (literally, “naked seeds”) are borne in cones and are not visible until maturity.",
-          "Angiosperms are plants that produce flowers and bear their seeds in fruits. They are the largest and most diverse group within the kingdom Plantae, with about 300,000 species.",
-          "group of vascular plants (plants with xylem and phloem) that reproduce via spores and have neither seeds nor flowers. They differ from mosses by being vascular, i.e., having specialized tissues that conduct water and nutrients and in having life cycles in which the branched sporophyte is the dominant phase.",
-          "Mosses typically form dense green clumps or mats, often in damp or shady locations. The individual plants are usually composed of simple leaves that are generally only one cell thick, attached to a stem that may be branched or unbranched and has only a limited role in conducting water and nutrients. Although some species have conducting tissues",
-        ],
-      },
-      {
-        status: 0,
-        name: "Animalia",
-        detail:
-          "The kingdom Animalia is the most evolved and is divided into two large groups - vertebrates and invertebrates. These animals are multi-celled, heterotrophic eukaryotes with aerobic respiration, sexual reproduction and the ability to move. This kingdom is one of the most diverse and comprises mammals, fish, birds, reptiles, amphibians, insects, molluscs and annelids, among others.",
-        species: [
-          "Porifera",
-          "Cnidaria",
-          "Platyhelminthes",
-          "Molluscs",
-          "Echinoderms",
-          "Insects",
-          "Crustaceans",
-          "Arachnids",
-          "Fish",
-          "Amphibians",
-          "Birds",
-          "Reptiles",
-          "Mammals",
-        ],
-        species_detail: [
-          "basal animal clade as a sister of the diploblasts. They are multicellular organisms that have bodies full of pores and channels allowing water to circulate through them, consisting of jelly-like mesohyl sandwiched between two thin layers of cells.",
-          "phylum under kingdom Animalia containing over 11,000 species[6] of aquatic animals found both in freshwater and marine environments, predominantly the latter. Their distinguishing feature is cnidocytes, specialized cells that they use mainly for capturing prey. Their bodies consist of mesoglea, a non-living jelly-like substance, sandwiched between two layers of epithelium that are mostly one cell thick.",
-          "Phylum Platyhelminthes belongs to kingdom Animalia. This phylum includes 13,000 species. The organisms are also known as flatworms. These are acoelomates and they include many free-living and parasitic life forms. Members of this phylum range in size from a single-celled organism to around 2-3 feet long.",
-          "A mollusc is an animal such as a snail, clam, or octopus which has a soft body. Many types of mollusc have hard shells to protect them.",
-          "any of a variety of invertebrate marine animals belonging to the phylum Echinodermata, characterized by a hard, spiny covering or skin. Beginning with the dawn of the Cambrian Period (542 million to 488 million years ago), echinoderms have a rich fossil history and are well represented by many bizarre groups, most of which are now extinct.",
-          "Insects (from Latin insectum) are pancrustacean hexapod invertebrates of the class Insecta. They are the largest group within the arthropod phylum. Insects have a chitinous exoskeleton, a three-part body (head, thorax and abdomen), three pairs of jointed legs, compound eyes and one pair of antennae.",
-          "Crustaceans belong to the subphylum Crustacea, and form a large, diverse group of arthropods including decapods, seed shrimp, branchiopods, fish lice, krill, remipedes, isopods, barnacles, copepods, opossum shrimps, amphipods and mantis shrimp.",
-          "class of joint-legged invertebrate animals (arthropods), in the subphylum Chelicerata. Arachnida includes, among others, spiders, scorpions, ticks, mites, pseudoscorpions, harvestmen, camel spiders, whip spiders and vinegaroons.",
-          "Aquatic, craniate, gill-bearing animal that lacks limbs with digits. Included in this definition are the living hagfish, lampreys, and cartilaginous and bony fish as well as various extinct related groups. Approximately 95% of living fish species are ray-finned fish, belonging to the class Actinopterygii, with around 99% of those being teleosts.",
-          "any member of the group of vertebrate animals characterized by their ability to exploit both aquatic and terrestrial habitats. The name amphibian, derived from the Greek amphibios meaning “living a double life,” reflects this dual life strategy—though some species are permanent land dwellers, while other species have a completely aquatic mode of existence.",
-          "group of warm-blooded vertebrates constituting the class Aves, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton.",
-          "Reptiles, in common parlance, are a group of tetrapods with an ectothermic ('cold-blooded') metabolism and amniotic development. Living reptiles comprise four orders: Testudines (turtles), Crocodilia (crocodilians), Squamata (lizards and snakes), and Rhynchocephalia (the tuatara). As of May 2023, about 12,000 living species of reptiles are listed in the Reptile Database. The study of the traditional reptile orders, customarily in combination with the study of modern amphibians, is called herpetology.",
-          "Mammals are characterized by the presence of milk-producing mammary glands for feeding their young, a neocortex region of the brain, fur or hair, and three middle ear bones. These characteristics distinguish them from reptiles and birds, from which their ancestors diverged in the Carboniferous Period over 300 million years ago. Around 6,400 extant species of mammals have been described and divided into 29 orders.",
-        ],
-      },
+        {
+            status: 1,
+            name: "Monera",
+            detail:
+                "This is the kingdom of microscopic living things and groups together the prokaryotes (archaea and bacteria). This group is present in all habitats and is made up of single-cell things with no defined nucleus. Most bacteria are aerobic and heterotrophic, while the archaea are usually anaerobic and their metabolism is chemosynthetic.",
+            species: ["Archaebacteria", "Eubacteria"],
+            species_detail: [
+                "group of microorganisms considered to be an ancient form of life that evolved separately from the bacteria and blue-green algae, and they are sometimes classified as a kingdom. From: Investigating Seafloors and Oceans, 2017.",
+                "prokaryotic organisms (i.e. lacking a membrane-bound nucleus), predominantly unicellular, and with DNA in a single circular chromosome. Cell wall, when present, is made up of peptidoglycan. Examples are E. coli, Staphylococcus, Salmonella, Lactobacillus. Synonym:(true) bacteria.",
+            ],
+            theme: 'rgb(158, 77, 234)'
+        },
+        {
+            status: 0,
+            name: "Fungi",
+            detail:
+                "This name is used to designate the fungi kingdom which includes yeasts, moulds and all species of mushrooms and toadstools. These multicellular aerobic heterotrophic eukaryotes have chitin in their cell walls, feed off other living things, and reproduce through spores.",
+            species: ["Ascomycetes", "Basidiomycetes"],
+            species_detail: [
+                "Fungal endophytes are defined as a group of fungi, mainly belonging to Ascomycota, that live in the inner healthy plant tissues (leaf, stem, root and reproductive structures), causing no apparent disease symptoms.",
+                "Fascinating group of fungi given their exceptional adjustment abilities to accommodate themselves to detrimental conditions of the environment where they constantly act as natural lignocellulose destroyers",
+            ],
+            theme: 'rgb(232, 63, 63)'
+        },
+        {
+            status: 0,
+            name: "Protista",
+            detail:
+                "This group is the most primitive of the eukaryotics and all the others are descendants of it. The Protista kingdom is paraphyletic - it contains the common ancestor but not all its descendants - and it includes those eukaryotic organisms that are not deemed to be animals, plants or fungi such as protozoa. As it is so heterogeneous it is difficult to categorise it, since its members have very little in common.",
+            species: [
+                "Green algae",
+                "Brown algae",
+                "Red algae",
+                "Ciliated",
+                "Flagellated",
+                "Amoeboid protozoa",
+            ],
+            species_detail: [
+                "Group consisting of the Prasinodermophyta and its unnamed sister which contains the Chlorophyta and Charophyta/Streptophyta. The land plants (Embryophytes) have emerged deep in the Charophyte alga as sister of the Zygnematophyceae. Since the realization that the Embryophytes emerged within the green algae, some authors are starting to include them",
+                "The major seaweeds of the temperate and polar regions. They are dominant on rocky shores throughout cooler areas of the world. Most brown algae live in marine environments, where they play an important role both as food and as a potential habitat. For instance, Macrocystis, a kelp of the order Laminariales, may reach 60 m (200 ft) in length and forms prominent underwater kelp forests. Kelp forests like these contain a high level of biodiversity.",
+                "abundant in marine habitats but relatively rare in freshwaters. Approximately 5% of red algae species occur in freshwater environments, with greater concentrations found in warmer areas. Except for two coastal cave dwelling species in the asexual class Cyanidiophyceae, there are no terrestrial species, which may be due to an evolutionary bottleneck in which the last common ancestor lost about 25% of its core genes and much of its evolutionary plasticity.",
+                "group of alveolates characterized by the presence of hair-like organelles called cilia, which are identical in structure to eukaryotic flagella, but are in general shorter and present in much larger numbers, with a different undulating pattern than flagella.",
+                "A flagellate is a cell or organism with one or more whip-like appendages called flagella. The word flagellate also describes a particular construction (or level of organization) characteristic of many prokaryotes and eukaryotes and their means of motion.",
+                "often called an amoeboid, is a type of cell or unicellular organism with the ability to alter its shape, primarily by extending and retracting pseudopods. Amoebae do not form a single taxonomic group; instead, they are found in every major lineage of eukaryotic organisms. Amoeboid cells occur not only among the protozoa, but also in fungi, algae, and animals.",
+            ],
+            theme: 'rgb(74, 63, 232)'
+        },
+        {
+            status: 0,
+            name: "Plantae",
+            detail:
+                "Trees, plants and other species of vegetation make up part of the Plantae kingdom - one of the oldest, and characterised by its immobile, multicellular and eukaryotic nature. These autotrophic things, whose cells contain cellulose and chlorophyll are essential for life on Earth since they release oxygen through photosynthesis. As regards their method of reproduction, this may be either sexual or asexual.",
+            species: [
+                "Equiseta",
+                "Lycopodia",
+                "Gymnosperms",
+                "Angiosperms",
+                "Ferns",
+                "Mosses",
+            ],
+            species_detail: [
+                "'living fossil', the only living genus of the entire subclass Equisetidae, which for over 100 million years was much more diverse and dominated the understorey of late Paleozoic forests. Some equisetids were large trees reaching to 30 m (98 ft) tall.",
+                "genus of clubmosses, also known as ground pines or creeping cedars,[3] in the family Lycopodiaceae. Two very different circumscriptions of the genus are in use.",
+                "gymnosperm, any vascular plant that reproduces by means of an exposed seed, or ovule—unlike angiosperms, or flowering plants, whose seeds are enclosed by mature ovaries, or fruits. The seeds of many gymnosperms (literally, “naked seeds”) are borne in cones and are not visible until maturity.",
+                "Angiosperms are plants that produce flowers and bear their seeds in fruits. They are the largest and most diverse group within the kingdom Plantae, with about 300,000 species.",
+                "group of vascular plants (plants with xylem and phloem) that reproduce via spores and have neither seeds nor flowers. They differ from mosses by being vascular, i.e., having specialized tissues that conduct water and nutrients and in having life cycles in which the branched sporophyte is the dominant phase.",
+                "Mosses typically form dense green clumps or mats, often in damp or shady locations. The individual plants are usually composed of simple leaves that are generally only one cell thick, attached to a stem that may be branched or unbranched and has only a limited role in conducting water and nutrients. Although some species have conducting tissues",
+            ],
+            theme: 'rgb(101, 207, 55)'
+        },
+        {
+            status: 0,
+            name: "Animalia",
+            detail:
+                "The kingdom Animalia is the most evolved and is divided into two large groups - vertebrates and invertebrates. These animals are multi-celled, heterotrophic eukaryotes with aerobic respiration, sexual reproduction and the ability to move. This kingdom is one of the most diverse and comprises mammals, fish, birds, reptiles, amphibians, insects, molluscs and annelids, among others.",
+            species: [
+                "Porifera",
+                "Cnidaria",
+                "Platyhelminthes",
+                "Molluscs",
+                "Echinoderms",
+                "Insects",
+                "Crustaceans",
+                "Arachnids",
+                "Fish",
+                "Amphibians",
+                "Birds",
+                "Reptiles",
+                "Mammals",
+            ],
+            species_detail: [
+                "basal animal clade as a sister of the diploblasts. They are multicellular organisms that have bodies full of pores and channels allowing water to circulate through them, consisting of jelly-like mesohyl sandwiched between two thin layers of cells.",
+                "phylum under kingdom Animalia containing over 11,000 species[6] of aquatic animals found both in freshwater and marine environments, predominantly the latter. Their distinguishing feature is cnidocytes, specialized cells that they use mainly for capturing prey. Their bodies consist of mesoglea, a non-living jelly-like substance, sandwiched between two layers of epithelium that are mostly one cell thick.",
+                "Phylum Platyhelminthes belongs to kingdom Animalia. This phylum includes 13,000 species. The organisms are also known as flatworms. These are acoelomates and they include many free-living and parasitic life forms. Members of this phylum range in size from a single-celled organism to around 2-3 feet long.",
+                "A mollusc is an animal such as a snail, clam, or octopus which has a soft body. Many types of mollusc have hard shells to protect them.",
+                "any of a variety of invertebrate marine animals belonging to the phylum Echinodermata, characterized by a hard, spiny covering or skin. Beginning with the dawn of the Cambrian Period (542 million to 488 million years ago), echinoderms have a rich fossil history and are well represented by many bizarre groups, most of which are now extinct.",
+                "Insects (from Latin insectum) are pancrustacean hexapod invertebrates of the class Insecta. They are the largest group within the arthropod phylum. Insects have a chitinous exoskeleton, a three-part body (head, thorax and abdomen), three pairs of jointed legs, compound eyes and one pair of antennae.",
+                "Crustaceans belong to the subphylum Crustacea, and form a large, diverse group of arthropods including decapods, seed shrimp, branchiopods, fish lice, krill, remipedes, isopods, barnacles, copepods, opossum shrimps, amphipods and mantis shrimp.",
+                "class of joint-legged invertebrate animals (arthropods), in the subphylum Chelicerata. Arachnida includes, among others, spiders, scorpions, ticks, mites, pseudoscorpions, harvestmen, camel spiders, whip spiders and vinegaroons.",
+                "Aquatic, craniate, gill-bearing animal that lacks limbs with digits. Included in this definition are the living hagfish, lampreys, and cartilaginous and bony fish as well as various extinct related groups. Approximately 95% of living fish species are ray-finned fish, belonging to the class Actinopterygii, with around 99% of those being teleosts.",
+                "any member of the group of vertebrate animals characterized by their ability to exploit both aquatic and terrestrial habitats. The name amphibian, derived from the Greek amphibios meaning “living a double life,” reflects this dual life strategy—though some species are permanent land dwellers, while other species have a completely aquatic mode of existence.",
+                "group of warm-blooded vertebrates constituting the class Aves, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton.",
+                "Reptiles, in common parlance, are a group of tetrapods with an ectothermic ('cold-blooded') metabolism and amniotic development. Living reptiles comprise four orders: Testudines (turtles), Crocodilia (crocodilians), Squamata (lizards and snakes), and Rhynchocephalia (the tuatara). As of May 2023, about 12,000 living species of reptiles are listed in the Reptile Database. The study of the traditional reptile orders, customarily in combination with the study of modern amphibians, is called herpetology.",
+                "Mammals are characterized by the presence of milk-producing mammary glands for feeding their young, a neocortex region of the brain, fur or hair, and three middle ear bones. These characteristics distinguish them from reptiles and birds, from which their ancestors diverged in the Carboniferous Period over 300 million years ago. Around 6,400 extant species of mammals have been described and divided into 29 orders.",
+            ],
+            theme: 'rgb(255, 179, 38)'
+        },
     ];
     content_1 = ``;
     c = 0;
-    content_3 = `<button class="specie">All</button>`;
+    content_3 = `<button class="specie" onclick="whspecie('All')">All</button>`;
     for (let i of kingdoms) {
-      content_1 += `<button class="btnking" onclick="selectKingdom(this)" data-select=${i.status} data-item="${c}">${i.name}</button>`;
-      c++;
+        content_1 += `<button class="btnking" onclick="selectKingdom(this)" data-select=${i.status} data-item="${c}">${i.name}</button>`;
+        c++;
     }
+    c = 0;
     for (let i of kingdoms[0].species) {
-      content_3 += `<button class="specie">${i}</button>`;
+        content_3 += `<button class="specie" onclick="whspecie(this)" data-king="${0}" data-type="${c}">${i}</button>`;
+        c++;
     }
     document.querySelector(".content-1").innerHTML = content_1;
     document.querySelector(".content-2").innerHTML = `
@@ -283,58 +312,102 @@
     content_3_detail = ``;
     content_3_c = 0;
     for (let i of kingdoms[0].species) {
-      content_3_detail += `
+        content_3_detail += `
         <div class="card-detail">
             <h2>${i}</h2>
             <br />
             <p style="text-indent: 3rem">${kingdoms[0].species_detail[content_3_c]}</p>
         </div>
         `;
-      content_3_c++;
+        content_3_c++;
     }
     document.querySelector(".content-3-detail").innerHTML = content_3_detail;
 
     document.querySelector(
-      ".content-3-title"
+        ".content-3-title"
     ).innerText = `What's species in ${kingdoms[0].name}`;
     document.querySelector(".content-3-select").innerHTML = content_3;
 
     function selectKingdom(d) {
-      for (let i of document.querySelectorAll('.btnking[data-select="1"]')) {
-        i.dataset.select = 0;
-      }
-      d.dataset.select = 1;
-      document.querySelector(".content-2").innerHTML = `
+        for (let i of document.querySelectorAll('.btnking[data-select="1"]')) {
+            i.dataset.select = 0;
+        }
+        d.dataset.select = 1;
+        document.querySelector(".content-2").innerHTML = `
         <h2>${kingdoms[d.dataset.item].name}</h2>
         <br />
         <hr />
         <br />
         <p>${kingdoms[d.dataset.item].detail}</p>
         `;
-      content_3 = `<button class="specie">All</button>`;
-      for (let i of kingdoms[d.dataset.item].species) {
-        content_3 += `<button class="specie">${i}</button>`;
-      }
-      content_3_detail = ``;
-      content_3_c = 0;
-      for (let i of kingdoms[d.dataset.item].species) {
-        content_3_detail += `
+        content_3 = `<button class="specie" onclick="whspecie('All')" >All</button>`;
+        c = 0;
+        for (let i of kingdoms[d.dataset.item].species) {
+            content_3 += `<button class="specie" onclick="whspecie(this)" data-king="${d.dataset.item}" data-type="${c}">${i}</button>`;
+            c++;
+        }
+        content_3_detail = ``;
+        content_3_c = 0;
+        for (let i of kingdoms[d.dataset.item].species) {
+            content_3_detail += `
         <div class="card-detail">
             <h2>${i}</h2>
             <br />
-            <p style="text-indent: 3rem">${
-              kingdoms[d.dataset.item].species_detail[content_3_c]
-            }</p>
+            <p style="text-indent: 3rem">${kingdoms[d.dataset.item].species_detail[content_3_c]
+                }</p>
         </div>
         `;
-        content_3_c++;
-      }
-      document.querySelector(".content-3-detail").innerHTML = content_3_detail;
+            content_3_c++;
+        }
+        document.querySelector(".content-3-detail").innerHTML = content_3_detail;
 
-      document.querySelector(
-        ".content-3-title"
-      ).innerText = `What's species in ${kingdoms[d.dataset.item].name}`;
-      document.querySelector(".content-3-select").innerHTML = content_3;
+        document.querySelector(
+            ".content-3-title"
+        ).innerText = `What's species in ${kingdoms[d.dataset.item].name}`;
+        document.querySelector(".content-3-select").innerHTML = content_3;
+        ck = 0;
+        for (let i of kingdoms) {
+            document.getElementsByClassName('btnking')[ck].style.background = 'transparent'
+            ck++;
+        }
+        document.getElementsByClassName('btnking')[d.dataset.item].style.background = kingdoms[d.dataset.item].theme
     }
-  </script>
+
+    function whspecie(k) {
+        if (k != 'All') {
+            let king = k.dataset.king;
+            let type = k.dataset.type
+            document.querySelector('.content-3-detail').innerHTML = `
+            <div class="card-detail">
+            <h2>${kingdoms[king].species[type]}</h2>
+            <br />
+            <p style="text-indent: 3rem">${kingdoms[king].species_detail[type]
+                }</p>
+        </div>`
+        console.log('which')
+        }
+        else {
+            let king = document.querySelector('.btnking[data-select="1"]').dataset.item
+            console.log('All')
+            content_3_detail = ``;
+            content_3_c = 0;
+            for (let i of kingdoms[king].species) {
+                content_3_detail += `
+        <div class="card-detail">
+            <h2>${i}</h2>
+            <br />
+            <p style="text-indent: 3rem">${kingdoms[king].species_detail[content_3_c]
+                    }</p>
+        </div>
+        `;
+                content_3_c++;
+            }
+            document.querySelector(".content-3-detail").innerHTML = content_3_detail;
+
+        }
+
+
+    }
+</script>
+
 </html>
