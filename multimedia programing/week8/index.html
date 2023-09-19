@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            font-family: 'Major Mono Display', monospace;
+            color: white;
+        }
+
+        body {
+            margin: 0;
+            background: hsl(0, 0%, 10%);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 1rem;
+            margin: auto
+        }
+
+        .container-space {
+            padding: 1rem;
+        }
+
+        .carousel {
+            height: 100vh;
+            position: relative;
+            width: 100%;
+            /* filter: blur(10px); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .bg-back {
+            background: black url('https://cdn.shopify.com/s/files/1/0537/7561/products/DSC02228_1500x1500.jpg?v=1619037549');
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            filter: blur(var(--blur));
+
+        }
+
+
+        .head {
+            --h: 30px;
+            font-size: 10rem;
+            text-align: center;
+            z-index: 100;
+            letter-spacing: var(--h);
+
+        }
+
+        .carousel .pic {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            filter: blur(var(--blurtal));
+            transform: translateY(var(--ty));
+            /* transition: .3s; */
+        }
+
+        .blend {
+            background: linear-gradient(transparent, hsl(0, 0%, 10%));
+            height: 20vh;
+            width: 100%;
+            position: absolute;
+            bottom: -10px;
+        }
+
+        .content-1 {
+            height: 400vh;
+
+        }
+
+        .sub1 {
+            position: absolute;
+            font-family: sans-serif;
+            font-weight: 100;
+            text-align: right;
+            right: 100px;
+            top: 250px;
+        }
+
+        .sub2 {
+            position: absolute;
+            font-family: sans-serif;
+            font-weight: 100;
+            text-align: left;
+            left: 100px;
+            top: 250px;
+        }
+
+        .content-1{
+            margin-top: 10rem;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body data-y="0">
+    <header></header>
+    <main>
+        <div class="carousel">
+            <div class="bg-back"></div>
+            <div class="blend"></div>
+            <h4 class="sub1">.<br> tectosilicate mineral <br>Colorless white, pink, salmon, red or
+                green<br>Monoclinic<br>.</h4>
+            <h4 class="sub2">.<br>Slc <br>CaAl2Si3O10 · 3H2O<br>zeolite<br>.</h4>
+            <img class="pic" src="./src/shadow.png">
+            <img class="pic" src="./src/DSC02228_1500x1500-removebg.png">
+            <div class="head">Scolecite</div>
+
+
+        </div>
+        <div class="content-1">
+            <div class="container">
+                <div class="container-space">
+                    <h1>it is monoclinic</h1>
+                    <p style="font-family: sans-serif;line-height:25px;">m with space group cc, but crystals are pseudotetragonal. scolecite,<br> like natrolite and mesolite, usually occurs as acicular (needle-like) and fibrous aggregations. it has nearly the same angles between the crystal faces as does natrolite, but natrolite is orthorhombic and scolecite is monoclinic. The etched figures (figures that arise from the action of a solvent on a crystal face, and indicate its true symmetry) and the pyroelectric character of scolecite show that it crystallizes with a plane of symmetry, but no axis of symmetry, that is to say it belongs to the hemihedral class of the monoclinic system. Scolecite can therefore be distinguished from natrolite by an optical examination, since the acicular crystals do not extinguish parallel to their length between crossed nicol prisms. Twinning on the ortho-pinacoid is usually evident.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script>
+    document.body.dataset.h = window.innerHeight
+    document.addEventListener('scroll', setBodyScrollPosition);
+    document.addEventListener('scroll', setCarouselBlur);
+    function setBodyScrollPosition() {
+        document.body.dataset.y = window.scrollY
+        console.log(document.body.dataset.y)
+    }
+    function setCarouselBlur() {
+        let bg_back = document.querySelector('.bg-back')
+        let bg_front1 = document.querySelectorAll('.carousel .pic')[0]
+        let bg_front2 = document.querySelectorAll('.carousel .pic')[1]
+        let head = document.querySelector('.head')
+        let hh = document.querySelector('--h')
+        let y = document.body.dataset.y
+        bg_back.style.setProperty('--blur', (parseInt(y)) + 'px')
+        bg_front1.style.setProperty('--blurtal', (parseInt(y) * .05) + 'px')
+        bg_front2.style.setProperty('--blurtal', (parseInt(y) * .01) + 'px')
+        bg_front2.style.setProperty('--ty', (parseInt(y) * -0.5) + 'px')
+
+    }
+</script>
+
+</html>

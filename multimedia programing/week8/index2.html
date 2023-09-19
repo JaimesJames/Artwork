@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .activeElement {
+            width: calc(1% * var(--val));
+            height: 10rem;
+            background: yellow;
+            margin: 1rem;
+            transition: .3s;
+        }
+    </style>
+</head>
+
+<body data-y="0">
+
+    <div class="activeElement" data-val="10" style="--val:10"></div>
+    <div class="activeElement" data-val="20" style="--val:10"></div>
+    <div class="activeElement" data-val="30" style="--val:10"></div>
+    <div class="activeElement" data-val="40" style="--val:10"></div>
+    <div class="activeElement" data-val="50" style="--val:10"></div>
+    <div class="activeElement" data-val="60" style="--val:10"></div>
+    <div class="activeElement" data-val="70" style="--val:10"></div>
+    <div class="activeElement" data-val="80" style="--val:10"></div>
+    <div class="activeElement" data-val="90" style="--val:10"></div>
+    <div class="activeElement" data-val="10" style="--val:10"></div>
+    <div class="activeElement" data-val="50" style="--val:10"></div>
+    <div class="activeElement" data-val="80" style="--val:10"></div>
+    <div class="activeElement" data-val="20" style="--val:10"></div>
+    <div class="activeElement" data-val="60" style="--val:10"></div>
+    <div class="activeElement" data-val="70" style="--val:10"></div>
+    <div class="activeElement" data-val="10" style="--val:10"></div>
+    <div class="activeElement" data-val="40" style="--val:10"></div>
+    <div class="activeElement" data-val="80" style="--val:10"></div>
+</body>
+<script>
+    document.addEventListener('scroll', activeA);
+    function activeA() {
+        let activeElement = document.querySelectorAll('.activeElement')
+
+        for (let i of activeElement) {
+            let y = i.getBoundingClientRect().y;
+            let bodyY = parseInt(document.body.dataset.y)
+            if (bodyY > y) {
+                // console.log('top hide')
+                i.style.setProperty('--val',0)
+            }
+            else {
+                // console.log('top in screen')
+                let val = i.dataset.val
+                i.style.setProperty('--val',val)
+            }
+        }
+
+    }
+</script>
+
+</html>

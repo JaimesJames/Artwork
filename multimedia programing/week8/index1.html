@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .activeElement{
+            width: 10rem;
+            height: 10rem;
+            background: yellow;
+            margin: 1rem;
+        }
+        .bubble{
+            --bubble-y:0;
+            background: deepskyblue;
+            opacity: .5;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 100%;
+            position: absolute;
+            z-index: 10;
+            right: 1rem;
+            top: calc(1rem + (var(--bubble-y) * 1px));
+            transition: all .3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="bubble"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <div class="activeElement"></div>
+    <button onclick="callBubble()" style="position: fixed;left: 0; bottom: 0;">come</button>
+</body>
+<script>
+    document.addEventListener('scroll', setBodyScrollPosition);
+
+    function setBodyScrollPosition(){
+        document.body.dataset.y = window.scrollY
+    }
+    function callBubble(){
+        document.querySelector('.bubble').style.setProperty('--bubble-y', document.body.dataset.y)
+    }
+</script>
+</html>
