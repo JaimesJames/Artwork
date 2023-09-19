@@ -51,6 +51,7 @@
         for(let i of el){
             console.log(i)
             let top = i.getBoundingClientRect().top
+            console.log(top)
             let topWidthOffset = top - parseInt(document.body.dataset.h)
             // console.log(topWidthOffset)
             i.style.setProperty('--hue',top*0.1)
@@ -62,6 +63,7 @@
                 i.style.setProperty('--val', 0)
             }
         }
+        console.log('-----')
     }
     setBar()
 </script>
