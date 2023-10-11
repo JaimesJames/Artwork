@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        font-family: "Major Mono Display", monospace;
+        color: white;
+      }
+
+      body {
+        margin: 0;
+        background: hsl(0, 0%, 10%);
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 1rem;
+        margin: auto;
+      }
+
+      .container-space {
+        padding: 1rem;
+      }
+
+      .carousel {
+        height: 110vh;
+        position: relative;
+        width: 100%;
+        /* filter: blur(10px); */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: end;
+      }
+
+      .bg-back {
+        background: black
+          url("https://cdn.shopify.com/s/files/1/0537/7561/products/DSC02228_1500x1500.jpg?v=1619037549");
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        filter: blur(var(--blur));
+      }
+
+      .head {
+        --t: 500px;
+        --h: 30px;
+        --c: 100%;
+        font-size: 10rem;
+        color: hsl(0,0%,var(--c));
+        z-index: 100;
+        letter-spacing: var(--h);
+        margin-bottom: var(--t);
+        transition: .1s;
+      }
+
+      .carousel .pic {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        filter: blur(var(--blurtal));
+        transform: translateY(var(--ty));
+        /* transition: .3s; */
+      }
+
+      /* .blend {
+            background: linear-gradient(transparent, hsl(0, 0%, 10%));
+            height: 20vh;
+            width: 100%;
+            position: absolute;
+            bottom: -10px;
+        } */
+
+
+      .sub1 {
+        position: absolute;
+        font-family: sans-serif;
+        font-weight: 100;
+        text-align: right;
+        right: 100px;
+        top: 200px;
+      }
+
+      .sub2 {
+        position: absolute;
+        font-family: sans-serif;
+        font-weight: 100;
+        text-align: left;
+        left: 100px;
+        top: 200px;
+      }
+      /* .sub-bar{
+            width: 20vw;
+            height: 20vw;
+            background-color: rgb(17, 17, 17);
+            position: absolute;
+            right: 5rem;
+            top: 5rem;
+            
+        } */
+
+      .content-1 {
+        text-align: center;
+        position: relative;
+      }
+      .inner-content1{
+        --typ:0;
+        transform: translateY(var(--typ));
+        transition: .5s;
+      }
+    </style>
+  </head>
+
+  <body data-y="0">
+    <header></header>
+    <main>
+      <div class="carousel">
+        <div class="bg-back"></div>
+        <!-- <div class="blend"></div> -->
+        <div class="sub-bar"></div>
+        <h4 class="sub1">
+          .<br />
+          tectosilicate mineral <br />Colorless white, pink, salmon, red or
+          green<br />Monoclinic<br />.
+        </h4>
+        <h4 class="sub2">
+          .<br />Slc <br />CaAl2Si3O10 · 3H2O<br />zeolite<br />.
+        </h4>
+
+        <img class="pic" src="./src/shadow.png" />
+        <img class="pic" src="./src/DSC02228_1500x1500-removebg.png" />
+        <div class="head">Scolecite</div>
+      </div>
+      <div class="content-1">
+        <div class="container">
+          <div class="container-space inner-content1">
+            <h1>Origin</h1>
+            <p style="font-family: sans-serif; line-height: 25px">
+              Scolecite is a hydrous calcium aluminum silicate that is a member
+              of the Zeolite family. It is a secondary crystal that forms in the
+              cavities of basalt, granite, and syenites. The mineral was first
+              reported in 1813 by A.F. Gehlan and J.N. Fuchs in Germany, and was
+              named for the Greek word meaning “worm”. This was referring to the
+              stones tendency to curl when heated with a blowtorch. Scolecite is
+              formed in slender prismatic crystals and is also found in
+              abundance in large masses. It ranges in color from white, pink,
+              purple, yellow, and red to even colorless. Scolecite can be found
+              in very rare crystal forms in Iceland and very few parts of India,
+              but can be found in masses all across the globe including USA,
+              Europe, and Africa.
+            </p>
+            <h1>Meaning & Energy</h1>
+            <p style="font-family: sans-serif; line-height: 25px">
+              Scolecite is the stone of “inner peace”, and will be the perfect
+              remedy for anyone looking to relax, especially after a long day.
+              The crystal actives our upper chakras and is commonly used as a
+              meditation tool. When holding a piece to the third eye, one will
+              immediately feel slow, pulsating vibrations massage our 6th
+              chakra. Scolecite strengthens and unlocks our third eye and allows
+              for intense lucid dreaming. With it, extreme vividness and
+              enhanced memory of your nightly inter-dimensional travels is very
+              common. When meditating with the intention of auric cleansing or
+              self-healing, it is important to do so from the heart. Scolecite
+              may work on a higher vibration with the upper chakras, but it also
+              unlocks the heart and pushes it to release anything that may be
+              causing pain from within. This stone is a total auric cleanser and
+              will in a sense do a “spring cleaning” on you when working with it
+              daily. It’s important to cleanse and sage Scolecite after you’ve
+              worked with it due to it pulling out negative energy from within
+              and absorbing it. The Council recommends carrying Scolecite with
+              you daily as a reminder to focus on yourself and to open up your
+              hearts energies to those around you. Scolecite is very good stone
+              for anyone looking to do dream work or enhance their memory. It is
+              a stone that prides itself on helping you be able to understand
+              imagery within dreams and the correlation that it may play on in
+              your life. Everything within our dreams has a meaning about
+              something in reality, and this stone aids us in this discovery.
+              Being able to understand our dreams can help us move forward and
+              educate ourselves on where we want to go and how were going to get
+              there.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    document.body.dataset.h = window.innerHeight;
+    document.addEventListener("scroll", setBodyScrollPosition);
+    document.addEventListener("scroll", setCarouselBlur);
+    document.addEventListener("scroll", setContent);
+    function setBodyScrollPosition() {
+      document.body.dataset.y = window.scrollY;
+      console.log(document.body.dataset.y);
+    }
+    function setCarouselBlur() {
+      let bg_back = document.querySelector(".bg-back");
+      let bg_front1 = document.querySelectorAll(".carousel .pic")[0];
+      let bg_front2 = document.querySelectorAll(".carousel .pic")[1];
+      let head = document.querySelector(".head");
+      let y = parseInt(document.body.dataset.y);
+      bg_back.style.setProperty("--blur", y + "px");
+      bg_front1.style.setProperty("--blurtal", y * 0.1 + "px");
+      bg_front2.style.setProperty("--blurtal", y * 0.01 + "px");
+      bg_front2.style.setProperty("--ty", y * -1.3 + "px");
+      bg_front1.style.setProperty("--ty", y * -0.6 + "px");
+      if (y<800){
+        head.style.setProperty('--t',500-(y*0.5)+'px')
+      }
+      if (y<500){
+        head.style.setProperty('--c',100- y*0.9+'%')
+      }
+      else{
+        head.style.setProperty('--c',100+'%')
+      }
+
+    }
+
+    function setContent(){
+        let point = document.querySelector(".head").getBoundingClientRect().top
+        let content_1 = document.querySelector('.inner-content1')
+        console.log(point)
+        if(point<200){
+            content_1.style.setProperty('opacity',1)
+            content_1.style.setProperty('--typ', '-50px')
+        }
+        else{
+            content_1.style.setProperty('opacity',0)
+            content_1.style.setProperty('--typ','0px')
+        }
+    }
+    setContent()
+  </script>
+</html>

@@ -1,0 +1,288 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: FC-Orbit, sans-serif;
+    color: white;
+}
+@font-face {
+    font-family: FC-Orbit;
+    src: url('../../GameFindItem/asset/font/FC_OrbitRounded.ttf');
+    font-weight: bold;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    overflow: hidden;
+    --greenH1: #336666;
+    --lightGreenH1: #339693;
+    --greenH4: #4CA6C1;
+}
+.container{
+    width: 100%;
+    max-width: 1194px;
+    height: 834px;
+    margin: auto;
+
+    overflow: hidden;
+
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{font-size: 13rem;}
+h2{font-size: 5rem;}
+h3{font-size: 3.5rem;}
+h4{font-size: 2.9rem;}
+
+.content{
+    width: 100%;
+    max-width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /* deafualt ชิดซ้าย */
+    flex-direction: column;
+    z-index: 2;
+}
+button{
+    background: hsl(1, 100%, 100%, 30%);
+    padding: 1rem 3rem;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+}
+
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.scene2front{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene2_front.png');
+}
+.grain{
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    background-image: url('../asset/grain.png');
+}
+.scene3mid{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene3_mid.png');
+}
+.scene3front{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene3_front.png');
+}
+.scene3back{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene3_back.png');
+}
+
+
+
+
+/* ของเจมี่เจม */
+.scene-6{
+    background-image: url('../content3_Jaimes/1x/Artboard 5.png');
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.scene-7{
+    background-image: url('../content3_Jaimes/1x/Artboard 2.png');
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.scene-8{
+    background-image: url('../content3_Jaimes/1x/Artboard 1.png');
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.item{
+    position: absolute;
+    width: 100%;
+    
+}
+
+.front_dirty, .sand{
+    bottom: 0;
+}
+
+.back_kelp_1{
+    width: 15%;
+    bottom: 150px;
+    left: 250px;
+}
+
+.back_kelp_2{
+    width: 15%;
+    bottom: 100px;
+    left: 450px;
+}
+
+.back_kelp_3{
+    width: 15%;
+    bottom: 100px;
+    right: 100px;
+}
+
+.back_coral_1{
+    width: 20%;
+    bottom: 120px;
+    right: 350px;
+}
+
+.back_coral_2{
+    width: 15%;
+    bottom: 100px;
+    right: 170px;
+}
+
+.back_coral_3{
+    width: 20%;
+    bottom: 425px;
+    left: 0px;
+}
+
+.back_fish_1{
+    width: 25%;
+    opacity: 0.2;
+    top: 120px;
+    left: 120px;
+
+}
+
+.back_fish_2{
+    width: 25%;
+    opacity: 0.2;
+    top: 100px;
+    right: 200px;
+
+}
+
+.front{
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.tube{
+    bottom: 50px;
+    right: 0;
+    width: 15%;
+}
+
+
+.rightleg{
+    top: 200px;
+    width: 50%;
+}
+.body{
+    top: 320px;
+    left: 450px;
+    width: 25%;
+}
+
+.handright{
+    top: 400px;
+    left: 550px;
+    width: 25%;
+}
+
+.handleft{
+    top: -50px;
+}
+.namha{
+    left: 610px;
+    top: 335px;
+    width: 15%; 
+}
+.hair{
+    left: 555px;
+    top: 300px;
+    width: 15%; 
+}
+
+.boulder{
+    right: 0;
+}
+
+.frontback{
+    bottom: 0;
+}
+
+.mountain{
+    top: 100px;
+}
+
+.something2{
+    top: -200px;
+    left: -280px;
+}
+.something3{
+    top: -100px;
+    left: -280px;
+}
+.line{
+    right: 0;
+    top: 600px;
+}
+
+.fishback1{
+    right: 200px;
+    top: 900px;
+}
+
+.fishback2{
+    right: 500px;
+    top: 200px;
+}
+
+.fishback3{
+    left: 100px;
+    top: 400px;
+}
+
+.fishback3-1{
+    right: 100px;
+    top: 1100px;
+}
+
+.fishback3-2{
+    right: 350px;
+    top: 1200px;
+}
+
+.coralll{
+    right: 0;
+    bottom: 100px;
+}
+
+/* .bubblebubjai{
+    
+} */
+
+/* ของเจมี่เจม */

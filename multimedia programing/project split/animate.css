@@ -1,0 +1,566 @@
+/* moving item */
+
+.asset{
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+}
+
+.light{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/light.png');
+    z-index: 1;
+    top: -40px;
+    animation: 
+        oplight 2s infinite alternate,
+        movelight 10s linear infinite;
+}
+
+@keyframes oplight {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+@keyframes movelight {
+    0% {left: -2500px;}
+    100% {left: 2500px;}
+  }
+
+.boat{
+    background-image: url('../asset/boat.png');
+    width: 1100px;
+    aspect-ratio: 1093/724;
+    left: 900px;
+    top: 840px;
+    animation: ty20 3s infinite alternate;
+}
+
+@keyframes ty20 {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(20px);}
+    /* อย่าลืมใส่หน่วย */
+}
+
+.bird{
+    background-image: url('../asset/bird.png');
+    width: 500px;
+    aspect-ratio: 1/1;
+    animation: movebird 17s infinite linear;
+}
+
+.smallbird{
+    background-image: url('../asset/bird.png');
+    width: 300px;
+    opacity: 0.5;
+    aspect-ratio: 1/1;
+    animation: movebird 10s infinite ease-in-out;
+}
+
+@keyframes movebird {
+    0% {left: 103%; top: 300px;}
+    100% {left: 0px; top: -400px;}
+}
+
+.cloud1{
+    background-image: url('../asset/cloud1.png');
+    width: 500px;
+    aspect-ratio: 757/73;
+    top: 200px;
+    right: 100px;
+    animation: 
+        cloudY 2.5s linear infinite alternate,
+        cloudX 30s linear infinite alternate;
+}
+.cloud2{
+    background-image: url('../asset/cloud2.png');
+    width: 300px;
+    aspect-ratio: 757/73;
+    top: 350px;
+    left: 100px;
+    animation: 
+        cloudY 2.8s linear infinite alternate,
+        cloudXreverse 25s linear infinite alternate;
+}
+
+@keyframes cloudY {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(5px);}
+}
+@keyframes cloudX {
+    0% {right: 100px;}
+    100% {right: 1400px;}
+}
+@keyframes cloudXreverse {
+    0% {left: 100px;}
+    100% {left: 2000px;}
+}
+
+.bubble{
+    background-image: url('../asset/bubble2.png');
+    aspect-ratio: 1/1;
+    animation: movebubble 3s linear infinite;
+}
+
+
+
+.bubble.two{
+    animation: movebubble 5s linear infinite;
+}
+.bubble.three{
+    animation: movebubble 5s 2s linear infinite;
+}
+
+@keyframes movebubble {
+    0% {opacity: 0; transform: translateY(0px);}
+    25% {opacity: .7; transform: translateY(-40px);}
+    75% {opacity: .7; transform: translateY(-80px);}
+    100% {opacity: 0; transform: translateY(-85px);}
+}
+
+.fishNemo{
+    background-image: url('../asset/fish_nemo.png');
+    aspect-ratio: 1/1;
+}
+
+.fishNemo.one{
+    animation: movefish 2s infinite alternate;
+}
+.fishNemo.two{
+    animation: movefish 2s .7s infinite alternate;
+}
+.fishNemo.three{
+    animation: movefish 2s 1.5s infinite alternate;
+}
+
+@keyframes movefish {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(20px,-20px);}
+}
+@keyframes movefishflip {
+    0% {transform: translate(0px,0px) rotateY(180deg);}
+    100% {transform: translate(40px,-40px) rotateY(180deg);}
+}
+
+/* scene 2 */
+
+.fishGroup{
+    background-image: url('../asset/fish_group.png');
+    width: 700px;
+    top: 300px;
+    left: -700px;
+    aspect-ratio: 638/209;
+    animation: movefishgroup 30s infinite linear;
+}
+
+@keyframes movefishgroup {
+    0% {transform: translate(0px,0px) rotate(0deg);}
+    50% {transform: translate(1800px,-300px) rotate(5deg);}
+    70% {transform: translate(3200px,-280px) rotate(10deg);}
+    100% {transform: translate(3200px,-250px) rotate(10deg);}
+}
+
+.fish2{
+    background-image: url('../asset/fish2.png');
+    width: 400px;
+    aspect-ratio: 1/1;
+}
+
+.fish2.one{
+    animation: movefish 2s infinite alternate inherit;
+}
+.fish2.two{
+    animation: movefish 2s .7s infinite alternate inherit;
+}
+.fish2.three{
+    animation: movefish 2s 1.5s infinite alternate;
+}
+
+.back_fish_1.one{
+    animation: movefish 2s infinite alternate inherit;
+}
+.fish.two{
+    animation: movefish 2s .7s infinite alternate inherit;
+}
+.fish.three{
+    animation: movefish 2s 1.5s infinite alternate;
+}
+
+.brokeCoral1{
+    background-image: url('../asset/broke\ coral1.png');
+    aspect-ratio: 1/1;
+}
+.brokeCoral1.one{
+    animation: 
+    brokeCoralLeftDown 5s infinite,
+    brokeCoralShow 5s infinite;
+}
+.brokeCoral1.two{
+    animation: 
+    brokeCoralRightUp 5s 3s infinite,
+    brokeCoralShow 5s 3s infinite;
+}
+
+.brokeCoral2{
+    background-image: url('../asset/broke\ coral2.png');
+    aspect-ratio: 1/1;
+}
+.brokeCoral2.one{
+    animation: 
+    brokeCoralLeftUp 5s 4s infinite,
+    brokeCoralShow 5s 4s infinite;
+}
+.brokeCoral2.two{
+    animation: 
+    brokeCoralRightUp 3s infinite,
+    brokeCoralShow 3s infinite;
+}
+.brokeCoral2.three{
+    animation: 
+    brokeCoralRightDown 5s 1s infinite,
+    brokeCoralShow 5s 1s infinite;
+}
+
+.brokeCoral3{
+    background-image: url('../asset/broke\ coral3.png');
+    aspect-ratio: 1/1;
+    animation: 
+    brokeCoralLeftDown 4s 1s infinite,
+    brokeCoralShow 4s 1s infinite;
+}
+.brokeCoral4{
+    background-image: url('../asset/broke\ coral4.png');
+    width: 200px;
+    left: 650px;
+    bottom: 170px;
+    aspect-ratio: 1/1;
+    animation: 
+    brokeCoralLeftUp 7s 2s infinite,
+    brokeCoralShow 7s 2s infinite;
+}
+.brokeCoral5{
+    background-image: url('../asset/broke\ coral5.png');
+    width: 300px;
+    left: 650px;
+    bottom: 300px;
+    aspect-ratio: 1/1;
+    animation: 
+    brokeCoralRightUp 7s 4s infinite,
+    brokeCoralShow 7s 4s infinite;
+}
+
+@keyframes brokeCoralRightUp {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(50px,-50px);}
+}
+@keyframes brokeCoralRightDown {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(50px,50px);}
+}
+@keyframes brokeCoralLeftUp {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(-50px,-50px);}
+}
+@keyframes brokeCoralLeftDown {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(-50px,50px);}
+}
+@keyframes brokeCoralShow {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    70% {opacity: 1;}
+    80% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.scene2light1{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene2_light1.png');
+    animation: oplight 4s infinite alternate;
+}
+.scene2light2{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene2_light2.png');
+    animation: oplight 4s 5s infinite alternate;
+}
+
+
+/* scene3 */
+
+
+.scene3light1{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene3_light1.png');
+    animation: oplight 4s infinite alternate;
+}
+.scene3light2{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/scene3_light2.png');
+    animation: oplight 5s infinite alternate;
+}
+
+.fish_brown{
+    background-image: url('../asset/fish_brown.png');
+    width: 150px;
+    aspect-ratio: 262/186;
+}
+.fish_nokyung{
+    background-image: url('../asset/fish_nokyung_red.png');
+    width: 150px;
+    aspect-ratio: 289/216;
+}
+.fish_saba{
+    background-image: url('../asset/fish_saba.png');
+    width: 150px;
+    aspect-ratio: 345/243;
+}
+.fish_yellow{
+    background-image: url('../asset/fish_yellow.png');
+    width: 150px;
+    aspect-ratio: 158/133;
+}
+.fish_rainbow{
+    background-image: url('../asset/fish_rainbow.png');
+    width: 150px;
+    aspect-ratio: 326/264;
+}
+
+.fishNemo.s3two, .fish_yellow.one{
+    animation: movefishflip 4s infinite alternate;
+}
+
+.fish_yellow.two{
+    animation: movefishflip 6s infinite alternate;
+}
+.fish_nokyung, .fishNemo.s3one{
+    animation: movefishflip 4s infinite alternate;
+}
+.fishNemo.s3five, .fish_rainbow, .fish_yellow.three{
+    animation: movefishmore 5s infinite alternate;
+}
+.fish_yellow.four, .fishNemo.s3three, .fish_brown{
+    animation: movefishmore 5s 1.5s infinite alternate;
+}
+.fish_saba, .fishNemo.s3four, .fish_yellow.three{
+    animation: movefishmore 6s 3s infinite alternate;
+}
+
+@keyframes movefishmore {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(30px,-30px);}
+}
+
+.kraben{
+    background-image: url('../asset/kraben.png');
+    width: 150px;
+    aspect-ratio: 367/260;
+    animation: movekraben 15s linear infinite;
+}
+@keyframes movekraben {
+    0% {transform: translate(0px,0px);}
+    100% {transform: translate(-1500px,1500px);}
+}
+
+.turtle{
+    background-image: url('../asset/turtle.png');
+    width: 150px;
+    aspect-ratio: 292/232;
+    animation: moveturtle 40s 5s linear infinite;
+}
+@keyframes moveturtle {
+    0% {transform: translate(0px,0px) rotateY(180deg);}
+    100% {transform: translate(3000px,0px) rotateY(180deg);}
+}
+
+.back_fish_1{
+    animation: backfish1 4s 0s alternate infinite;
+}
+
+.back_fish_2{
+    animation: backfish1 5s 0s alternate infinite;
+}
+
+.leftleg{
+    animation: leftleg 5s alternate infinite;
+}
+.rightleg{
+    animation: rightleg 7s alternate infinite;
+}
+
+.body{
+    animation: body 5s alternate infinite;
+}
+
+.handleft{
+    animation: handleft 3s 2s alternate infinite;
+}
+
+.hair{
+    animation: hair 3s alternate-reverse infinite;
+}
+
+.face {
+    animation: face 3s alternate infinite;
+}
+
+.namha{
+    animation: namha 3s alternate infinite;
+}
+
+@keyframes backfish1 {
+    0% {
+        transform: translate(0px,0px);
+        opacity: 0.3;}
+    50%{
+        opacity: 0.1;
+    }
+    100% {
+        transform: translate(30px,-30px);
+        opacity: 0.4;
+    }
+}
+
+@keyframes leftleg{
+    0% {
+        transform: rotatez(0deg);
+    }
+    100% {
+        transform: rotatez(10deg);
+    }
+}
+
+@keyframes rightleg{
+    0% {
+        transform: rotatez(0deg);
+    }
+    100% {
+        transform: rotatez(-5deg);
+    }
+}
+
+@keyframes body{
+    0% {
+        transform: rotatez(0deg);
+    }
+    100% {
+        transform: rotatez(10deg);
+    }
+}
+
+@keyframes handleft{
+    0%{
+        transform: rotatez(0deg);
+    }
+    100%{
+        transform: rotatez(10deg);
+    }
+}
+
+@keyframes hair{
+    0%{
+        transform: rotatez(-5deg);
+    }
+
+
+    100%{
+        transform: rotatez(5deg);
+    }
+}
+
+@keyframes face{
+    0%{
+        transform: rotatez(-2deg);
+    }
+
+
+    100%{
+        transform: rotatez(5deg);
+    }
+}
+
+@keyframes namha{
+    0%{
+        transform: rotatez(0deg);
+    }
+
+
+    100%{
+        transform: rotatez(20deg);
+    }
+}
+
+.wetsuit{
+    animation: wetsuit 10s alternate infinite;
+}
+
+@keyframes wetsuit{
+    0%{
+        transform: rotatez(0deg);
+    }
+
+    20%{
+        transform: translateY(-30px);
+    }
+    50%{
+        transform: rotatez(5deg);
+    }
+    80%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: rotatez(3deg);
+    }
+}
+
+
+.fishback2,.fishback3-1{
+    animation: backfish1se 4s 0s alternate infinite;
+}
+
+.fishback1,.fishback3{
+    animation: backfish1se 2s 01s alternate infinite;
+}
+
+.fishback3-2{
+    animation: backfish1se 3s 0s alternate infinite;
+}
+
+@keyframes backfish1se {
+    0% {
+        transform: translate(0px,0px);
+        opacity: 1;}
+    50%{
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(30px,-30px);
+        opacity: 0.8;
+    }
+}
+
+.lighte{
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/light.png');
+    z-index: 1;
+    top: -40px;
+    animation: 
+        oplighte 2s infinite alternate;
+}
+
+@keyframes oplighte {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+.turtleeiktua{
+    animation: movefishmore 3s infinite alternate;
+}
+
+.bubble.jj{
+    aspect-ratio: 1/1.5;
+}
